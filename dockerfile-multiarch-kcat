@@ -1,0 +1,7 @@
+FROM alpine:latest
+RUN apk add kcat
+
+COPY *.sh /opt/
+RUN chmod 777 /opt/*.sh
+
+ENTRYPOINT ["kcat"]
